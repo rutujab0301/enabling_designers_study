@@ -1,0 +1,220 @@
+{
+    "$schema": "https://raw.githubusercontent.com/revisit-studies/study/main/src/parser/StudyConfigSchema.json",
+    "studyMetadata": {
+        "title": "Basic Questionnaire Study",
+        "version": "pilot",
+        "authors": [
+            "The reVISit Team"
+        ],
+        "date": "2024-03-19",
+        "description": "A simple questionnaire study",
+        "organizations": [
+            "University of Utah",
+            "WPI",
+            "University of Toronto"
+        ]
+    },
+    "uiConfig": {
+        "contactEmail": "contact@revisit.dev",
+        "helpTextPath": "basic-questionnaire-study/assets/help.md",
+        "logoPath": "revisitAssets/revisitLogoSquare.svg",
+        "withProgressBar": true,
+        "autoDownloadStudy": false,
+        "sidebar": true
+    },
+    "components": {
+        "introduction": {
+            "type": "markdown",
+            "path": "basic-questionnaire-study/assets/introduction.md",
+            "response": []
+        },
+        "first-question-set": {
+            "type": "questionnaire",
+            "response": [
+                {
+                    "id": "q1-indoors",
+                    "prompt": "Are you indoors?",
+                    "required": true,
+                    "location": "aboveStimulus",
+                    "type": "radio",
+                    "options": ["Yes", "No"]
+                },
+                {
+                    "id": "q2-type_of_lights",
+                    "prompt": "What type of lights are around you?(Please select all that apply)",
+                    "required": true,
+                    "location": "aboveStimulus",
+                    "type": "checkbox",
+                    "options": ["Artificial light", "Natural light"],
+                    "withOther": true
+                    
+                },
+                {
+                    "id": "q3-brightness",
+                    "prompt": "How bright is your surrounding? (Ignoring the light from your computer screen)",
+                    "required": true,
+                    "location": "aboveStimulus",
+                    "type": "dropdown",
+                    "options": [
+                        "1 - Midnight pitch black",
+                        "2",
+                        "3",
+                        "4",
+                        "5 - 50%",
+                        "6",
+                        "7",
+                        "8",
+                        "9",
+                        "10 - Noon summer sun",
+                        "I don't know"
+                    ],
+                    "placeholder": "Select brightness level"
+                    },
+                    {
+                    "id": "q4-lightcolor",
+                    "prompt": "What color is the light around you?",
+                    "required": true,
+                    "location": "aboveStimulus",
+                    "type": "dropdown",
+                    "options": [
+                        "1 - Yellow",
+                        "2",
+                        "3",
+                        "4",
+                        "5 - Neutral",
+                        "6",
+                        "7",
+                        "8",
+                        "9",
+                        "10 - White/blue",
+                        "I don't know"
+                    ],
+                    "placeholder": "Select light color"
+                    },
+                    {
+  "id": "q5-monitor-type",
+  "prompt": "What type of monitor do you have? (If you can tell us your laptop/tablet model or make of your monitor that would be great!)",
+  "required": false,
+  "location": "aboveStimulus",
+  "type": "dropdown",
+  "placeholder": "Select a monitor type",
+  "options": [
+    "Apple iPad with retina display",
+    "Apple iPad",
+    "Amazon Kindle Fire HDX 8.9",
+    "ASUS MeMo Pad 8",
+    "Samsung Galaxy Tab Pro 8.4",
+    "AcerC720 Chromebook",
+    "Apple Macbook",
+    "ASUS Transformer Book T100",
+    "Dell XPS 15",
+    "Lenovo IdeaPad",
+    "Acer B296CL",
+    "ASUS PA2480Q",
+    "Apple Thunderbolt Display",
+    "BenQ XL2720Z",
+    "Dell U2713HM",
+    "HP DreamColor LP2480zx",
+    "Lenovo ThinkVision LT3053p",
+    "LG ColorPrime 27EA83-D",
+    "NEC MultiSync PA2W-BK",
+    "Viewsonic VX2450WM-LED",
+    "I don't know"
+  ]
+},
+{
+  "id": "q5-monitor-other",
+  "prompt": "Other (please specify):",
+  "required": false,
+  "location": "aboveStimulus",
+  "type": "shortText"
+},
+
+ {
+                    "id": "q6-monitorbrightness",
+                    "prompt": "Monitor Brightness",
+                    "required": true,
+                    "location": "aboveStimulus",
+                    "type": "dropdown",
+                    "options": [
+                        "1 - Minimum brightness",
+                        "2",
+                        "3",
+                        "4",
+                        "5 - 50",
+                        "6",
+                        "7",
+                        "8",
+                        "9",
+                        "10 - Maximum brightness",
+                        "I don't know"
+                    ],
+                    "placeholder": "Select monitor brightness"
+                    },
+
+{
+          "id": "q7-miscellaneous",
+          "prompt": "Anything else you would like to add?",
+          "location": "aboveStimulus",
+          "type": "longText"
+          
+        }
+
+
+            ]
+        },
+        
+        "second-question-set": {
+            "type": "questionnaire",
+            "response": [
+                {
+                    "id": "q3-satisfaction",
+                    "prompt": "Here's how it'll go...\n\nWe will show you a colored image with a circle in it, your task is to identify where the opening of the circle is in the image.\n\nClick on the button on the side that you think the opening is to move on to the next image. If you can't tell where the opening of the circle is, click on the I can't tell button to the bottom right. Try to answer each one as fast as you can. There will be 12 sets of images.\n\nThe trials will look something like this...\n\nClick on your guess and see how you do!",
+
+                    "required": true,
+                    "location": "aboveStimulus",
+                    "type": "likert",
+                    "leftLabel": "Not Enjoyable",
+                    "rightLabel": "Very Enjoyable",
+                    "numItems": 5
+                }
+            ]
+        },
+        "circle-gap-top": {
+  "description": "Here's how it'll go...\n\nWe will show you a colored image with a circle in it, your task is to identify where the opening of the circle is in the image.\n\nClick on the button on the side that you think the opening is to move on to the next image. If you can't tell where the opening of the circle is, click on the I can't tell button to the bottom right. Try to answer each one as fast as you can. There will be 12 sets of images.\n\nThe trials will look something like this...\n\nClick on your guess and see how you do!",
+  "instruction": "Here's how it'll go...\n\nWe will show you a colored image with a circle in it, your task is to identify where the opening of the circle is in the image.\n\nClick on the button on the side that you think the opening is to move on to the next image. If you can't tell where the opening of the circle is, click on the I can't tell button to the bottom right. Try to answer each one as fast as you can. There will be 12 sets of images.\n\nThe trials will look something like this...\n\nClick on your guess and see how you do!",
+  "type": "image",
+  "path": "basic-questionnaire-study/assets/images/Example_Image.png", 
+  "instructionLocation": "aboveStimulus",
+  "style": {
+    "width": "600px"
+  },
+  "nextButtonLocation": "sidebar",
+  "response": [
+    {
+      "id": "circle-gap-top-response",
+      "prompt": "Choose where the gap is:",
+      "location": "sidebar",
+      "type": "radio",
+      "options": [
+        "Top",
+        "Right",
+        "Bottom",
+        "Left",
+        "Can't tell"
+      ]
+    }
+  ]
+}
+
+    },
+    "sequence": {
+        "order": "fixed",
+        "components": [
+            "introduction",
+            "first-question-set",
+            "second-question-set",
+            "circle-gap-top"
+        ]
+    }
+}

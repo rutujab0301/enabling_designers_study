@@ -25,6 +25,7 @@
     "@mantine/hooks": "^7.10.1",
     "@mantine/modals": "^7.10.1",
     "@mantine/notifications": "^7.12.0",
+    "@mui/icons-material": "^7.2.0",
     "@quentinroy/latin-square": "^1.1.1",
     "@reduxjs/toolkit": "^2.5.0",
     "@tabler/icons-react": "^3.28.1",
