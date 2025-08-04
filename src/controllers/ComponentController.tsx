@@ -27,6 +27,7 @@ import { VegaController, VegaProvState } from './VegaController';
 import { useIsAnalysis } from '../store/hooks/useIsAnalysis';
 import { VideoController } from './VideoController';
 import { studyComponentToIndividualComponent } from '../utils/handleComponentInheritance';
+import CircleGapTrial from '../components/customTrials/CircleGapTrial';
 
 // current active stimuli presented to the user
 export function ComponentController() {
@@ -199,6 +200,7 @@ export function ComponentController() {
         {currentConfig.type === 'react-component' && <ReactComponentController currentConfig={currentConfig} provState={analysisProvState} answers={answers} />}
         {currentConfig.type === 'vega' && <VegaController currentConfig={currentConfig} provState={analysisProvState as VegaProvState} />}
         {currentConfig.type === 'video' && <VideoController currentConfig={currentConfig} />}
+        {currentConfig.type === 'circle-gap-trial' && <CircleGapTrial path={currentConfig.path} instruction={currentConfig.instruction} onNext={() => {}} />}
 
       </Suspense>
 

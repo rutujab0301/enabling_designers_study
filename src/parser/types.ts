@@ -868,7 +868,13 @@ export interface VideoComponent extends BaseIndividualComponent {
   withTimeline?: boolean;
 }
 
-export type IndividualComponent = MarkdownComponent | ReactComponent | ImageComponent | WebsiteComponent | QuestionnaireComponent | VegaComponent | VideoComponent;
+
+export interface CircleGapTrialComponent extends BaseIndividualComponent {
+  type: 'circle-gap-trial';
+  path: string; 
+}
+
+export type IndividualComponent = MarkdownComponent | ReactComponent | ImageComponent | WebsiteComponent | QuestionnaireComponent | VegaComponent | VideoComponent | CircleGapTrialComponent;
 
 /** The DeterministicInterruption interface is used to define an interruption that will be shown at a specific location in the block.
  *
