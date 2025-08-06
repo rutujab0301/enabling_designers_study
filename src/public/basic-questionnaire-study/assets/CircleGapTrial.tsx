@@ -11,15 +11,15 @@ type TrialComponentProps = {
 
 
 const ICON_MAP: Record<string, string> = {
-  top: "assets/icons/top.svg",
-  topRight: "assets/icons/top-right.svg",
-  right: "assets/icons/right.svg",
-  bottomRight: "assets/icons/bottom-right.svg",
-  bottom: "assets/icons/bottom.svg",
-  bottomLeft: "assets/icons/bottom-left.svg",
-  left: "assets/icons/left.svg",
-  topLeft: "assets/icons/top-left.svg",
-  unknown: "assets/icons/cant-tell.svg"
+  top: "/basic-questionnaire-study/assets/icons/top.svg",
+  topRight: "/basic-questionnaire-study/assets/icons/top-right.svg",
+  right: "/basic-questionnaire-study/assets/icons/right.svg",
+  bottomRight: "/basic-questionnaire-study/assets/icons/bottom-right.svg",
+  bottom: "/basic-questionnaire-study/assets/icons/bottom.svg",
+  bottomLeft: "/basic-questionnaire-study/assets/icons/bottom-left.svg",
+  left: "/basic-questionnaire-study/assets/icons/left.svg",
+  topLeft: "/basic-questionnaire-study/assets/icons/top-left.svg",
+  unknown: "/basic-questionnaire-study/assets/icons/cant-tell.svg"
 };
 
 const BUTTON_ORDER = [
